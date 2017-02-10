@@ -52,9 +52,7 @@ PRODUCT_PACKAGES += \
 
 #GSM
 PRODUCT_PACKAGES += \
-	gsm0710muxd \
-	gsm0710muxdmd2
-
+	gsm0710muxd
 
 #Ramdisk
 PRODUCT_COPY_FILES += \
@@ -132,29 +130,31 @@ PRODUCT_COPY_FILES += \
 #GPS
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
-
 #USB
 PRODUCT_PACKAGES += \
-com.android.future.usb.accessory#USB
+	com.android.future.usb.accessory#USB
 PRODUCT_PACKAGES += \
-com.android.future.usb.accessory#USB
+	com.android.future.usb.accessory#USB
 PRODUCT_PACKAGES += \
-com.android.future.usb.accessory#USB
+	com.android.future.usb.accessory#USB
 PRODUCT_PACKAGES += \
-com.android.future.usb.accessory
+	com.android.future.usb.accessory
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml 
 
 #USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES  += \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
     persist.sys.usb.config=mtp,adb \
-    ro.debuggable=1
+    ro.debuggable=1 \
+    ro.secure=0 \
+    ro.allow.mock.location=1 \
+    ro.zygote=zygote32
 
 #telephony
 PRODUCT_PACKAGES += \
