@@ -1,0 +1,4 @@
+LOCAL_PATH := device/Prestigio/PSP3504DUO
+
+PRODUCT_MAKEFILES := \
+$(LOCAL_PATH)/full_PSP3504DUO.mk
