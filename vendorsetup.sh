@@ -1,3 +1,3 @@
 add_lunch_combo cm_PSP3504DUO-user
-add_lunch_combo cm_PSP3504DUO-userdebug
+add_lunch_combo full_PSP3504DUO-userdebug
 add_lunch_combo cm_PSP3504DUO-eng
